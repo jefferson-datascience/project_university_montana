@@ -39,66 +39,32 @@ Assim, o nosso objetivo é responder a seguinte questão:
  
 **Qual vai ser o produto final?** O produto final será um relatório com as questões de negócios respondida. 
 
+# 2. Estratégia de Solução
 
-# 3. Estratégia de Solução
+Para esse tipo de problema, utilizamos a seguinte estratégia.
 
-**Etapa 00. Carregamento dos Dados:** Carregar os dados, Visualização Geral dos Dados.
+**Etapa 00. Carregamento dos Dados:** Organização dos dados disponibilizados pela Universidade.
 
 **Etapa 01. Escolha do Teste:** Escolher do Tipo de Teste que será utilizado para resolver o problema de negócio.
 
-**Etapa 02. Design de Experimento:** Formulação das hipóteses nula, hipótese alternativa e definição da métrica e determinação do tamanho da amostra.
+**Etapa 02. Design de Experimento:** Formulação das hipóteses nula, hipótese alternativa, definição da métrica e definição de parâmetros do teste como nível de confiança, nível de significância e poder estatístico.
 
-**Etapa 03. Preparação e Coleta dos Dados de Amostragem:** Verificação de dados nulos e duplicidade de flags e homogeneidade dos dados. Em  seguida, separação dos grupos controle e tratamento, coleta das amostragem e cálculo das taxas de conversões.
+**Etapa 03. Preparação e Coleta dos Dados de Amostragem:** Preparação dos Dados em uma tabela de contigência.
 
-**Etapa 04. Teste de Hipótese:** Determinação da melhor inferência, cálculo do p-valor e validação das hipóteses nula e alternativa.
+**Etapa 04. Teste de Hipótese:** Cálculo do p-valor e validação das hipóteses nula e alternativa e realização do Post-Hoc
 
-**Etapa 05. Conclusão do Teste:** Apresentar o relatório respondendo a questão de negócio.
+**Etapa 05. Conclusão do Teste:** Apresentação de relatório com a conclusão do Teste.
 
-# 4. Conclusão do Teste
+# 3. Conclusão do Teste
 
-Não conseguimos seguir com o experimento na Espanha, Grã-Bretanha, Turquia, Alemanha, França, Austrália e Canadá, pois faltam dados para realizar a amostra. Tanto para os dados do site quanto para os dados do App. Conseguimos das prosseguimento com os dados somente do Brasil, México e Estado Unidos.
+Nesse experimento estatístico, nós utilizamos o teste chi-quadrado de independência para saber se os títulos do botões tem um impacto na taxa de cliques. Assumindo as hipóteses abaixo: 
 
-Para os Dados do Site, foi formulada as seguintes hipóteses:
+**Hipótese Nula:** Não há uma relação entre os títulos dos botões e os cliques.
 
-**Hipótese Nula:** O preechimento automático e o preenchimento manual possuem a mesma média de quantidade gasta pelo site.
+**Hipótese Alternativa:** Há uma relação entre os títulos dos botões e os cliques.
 
-**Hipótese Alternativa:** O preechimento automático e o preenchimento manual possuem média de compras finalizadas diferentes pelo site.
+e com um p_valor de 2.0959498129984567e-09, concluímos que algum(ns) dos título tem um impacto na quantidade de cliques. Uma vez obtida essa informação, nós realizamos o teste post-hoc com o teste chi-quadrado para saber como era a relação dois a dois dos botões em relação ao botão "Interact". No fim, concluímos que os botões "Connect", "Help" e "Service" possuem um impacto na taxa de cliques comparados com o botão "Interact". Para ver o desenvolvimento do experimento, basta clicar nesse link: **[Experimento 01](https://github.com/jefferson-datascience/project_university_montana/blob/main/Project%20University%20Montana/notebooks/teste_relacao_titulos_cliques.ipynb)**
 
-Nos dados do site do Brasil, México e Estados Unidos falhamos em rejeitar a hipótese nula, onde os p-valores são, respectivamente, 0.5904, 0.992 e 0.5490 com um nível de significância de 0.05. 
+# 4. Próximos Passos
 
-Para os Dados do App, foi formulada as seguintes hipóteses:
-
-**Hipótese Nula:** O preechimento automático e o preenchimento manual possuem a mesma média de quantidade gasta pelo app.
-
-**Hipótese Alternativa:** O preechimento automático e o preenchimento manual possuem média de compras finalizadas diferentes pelo app.
-
-Nos dados do site do Brasil, México e Estados Unidos também falhamos em rejeitar a hipótese nula, onde os p-valores são, respectivamente, 0.2209, 0.284 e  0.3616 com um nível de significância de 0.05. 
-
-
-# 5. Respondendo as Questões de Negócio
-
-Como não há dados suficiente da Espanha, Grã-Bretanha, Turquia, Alemanha, França, Austrália e Canadá para realizar a amostra, informamos ao Head de Designers que não há dados suficientes para para realizar a inferência sobre esses países e que pode ser adota a seguinte estratégia:
-
-1. Realizar uma maior coleta de dados. 
-    
-    - Nessa situação, é importante ter em mente qual vai ser o custo desta coleta de mais amostras para que se tenha uma quantidade mínima para observar se há um lift de 8% na média de gastos dos clientes.
-
-Para os dados do Brasil, México e Estados Unidos, não houve diferença na média de gastos utilizando o formulário automático ou manual, tanto pelo site quanto pelo app.
-
-Nesse contexto, podemos tomar a seguinte atitude com o Head de Designers.
-
-1. Informar ao Head de Designers para solicitar a sua equipe uma melhoria no design do formulário automático.
-
-    - Nessa situação, com uma melhoria no formulário, é esperado que se observe um efeito maior na quantidade média de gastos, isto é, um maior lift esperado em relação ao formulário manual.
-    
-    
-2. Informar ao Head de Designers para solicitar uma nova amostragem.
-    
-    - Nessa situação, é primordial saber os custos e o tempo necessário para se realizar uma nova coleta de dados, pois com essas informações saberemos se com o lift esperado do formulário automático valerá a pena realizar essa nova coleta de dados.
-
-# 7. Próximos Passos
-
-  Os próximos passos desse projeto é levantar os custos de todo o processo de produção da página até o processo de coleta de amostra para saber o quanto que tem que ser o mínimo de lift dessa nova página para que se pague os custos de todo esse processo e além disso se obtenha o faturamento esperado.
-
-
-**Clique aqui para acessar o código e todo o desenvolvimento do projeto:** https://github.com/jefferson-datascience/project_eletronic_house/blob/main/conversao_formulario_pagamento/notebooks/6.0%20-%20jhc.conversao_formulario_pagamento.ipynb
+Como o objetivo do teste é dizer se existe alguma variação do botão que impacte de forma positiva as taxas de cliques, foi necessário realizar um novo experimento estatístico. Clique aqui para ver o planejamento do **[Experimento 02]()**.
