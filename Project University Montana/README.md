@@ -1,6 +1,6 @@
 # Experimento Estatístico 02 - Universidade de Montana
 
-<img src="https://github.com/jefferson-datascience/project_eletronic_house/blob/main/images/logo_eletronic_house.jpg" alt="logo" style="zoom:80%;" />
+<img src="[https://github.com/jefferson-datascience/project_eletronic_house/blob/main/images/logo_eletronic_house.jpg](https://github.com/jefferson-datascience/project_university_montana/blob/main/logo_university.jpg)" alt="logo" style="zoom:80%;" />
 
 
 
