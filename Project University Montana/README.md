@@ -1,63 +1,46 @@
-# Project University Montana
+# Experimento Estatístico 02 - Universidade de Montana
 
-## Nesse projeto você encontrará o desenvolvimento de testes A/B/n
+<img src="https://github.com/jefferson-datascience/project_eletronic_house/blob/main/images/logo_eletronic_house.jpg" alt="logo" style="zoom:80%;" />
 
-#### This project was made by Jefferson Henrique Candido.
 
-# 1. Business Problem.
 
-# 2. Business Assumptions.
+# 1. Problema a Ser Resolvido.
 
-# 3. Solution Strategy
+Sabendo que os botões "Connect", "Help" e "Service" impactam a taxa de cliques quando comparados ao botão "Interact", o nosso problema agora é saber quais desses botões é melhor que o interact e, por fim, responder a seguinte questão: 
+ 
+1. Alguma das conversões é realmente melhor do que a atual? Qual seria o nome da variação?
 
-My strategy to solve this challenge was:
 
-**Step 01. Data Description:**
+ ## Planejamento da Solução?
+ 
+**Qual vai ser a solução para o problema?** A solução para esse problema é uma aplicação de teste A/B sobre os seguintes botões: ("Connect", "Interact"), ("Help", "Interact") e ("Service", "Interact")
+ 
+**Qual vai ser o produto final?** O produto final será um relatório com as questões de negócios respondida. 
 
-**Step 02. Feature Engineering:**
 
-**Step 03. Data Filtering:**
+# 2. Estratégia de Solução
 
-**Step 04. Exploratory Data Analysis:**
+Para esse tipo de problema, utilizamos a seguinte estratégia.
 
-**Step 05. Data Preparation:**
+**Etapa 00. Carregamento dos Dados:** Organização dos dados disponibilizados pela Universidade.
 
-**Step 06. Feature Selection:**
+**Etapa 01. Escolha do Teste:** Escolher do Tipo de Teste que será utilizado para resolver o problema de negócio.
 
-**Step 07. Machine Learning Modelling:**
+**Etapa 02. Design de Experimento:** Formulação das hipóteses nula, hipótese alternativa, definição da métrica e definição de parâmetros do teste como nível de confiança, nível de significância e poder estatístico, cálculo do effect size e determinação do tamanho da mostra para o teste ter o mínimo de validade.
 
-**Step 08. Hyperparameter Fine Tunning:**
+**Etapa 03. Preparação e Coleta dos Dados de Amostragem:** Separação dos dados em seus respectivos grupos.
 
-**Step 09. Convert Model Performance to Business Values:**
+**Etapa 04. Teste de Hipótese:** Cálculo do p-valor de cada grupo e realização das validações das hipóteses nula e alternativa sobre cada Grupo.
 
-**Step 10. Deploy Modelo to Production:**
+**Etapa 05. Conclusão do Teste:** Apresentação de relatório com a conclusão do Teste e resposta da questão de negócio.
 
-# 4. Top 3 Data Insights
+# 3. Conclusão do Teste
 
-**Hypothesis 01:**
+Nesse teste o objetivo foi verificar a diferença na proporção de taxas de cliques entre os botões em seus respectivos grupos e verificar qual possuia uma melhor efetividade. Concluímos que os botões "Connect", "Help" e "Services" obtem um melhor desempenho o botão "Interact" sendo que o botão com melhor efetividade é o "Connect". Para acessar o experimento estatístico e os códigos desenvolvidos, basta clicar no link: **[Experimento 02](https://github.com/jefferson-datascience/project_university_montana/blob/main/Project%20University%20Montana/notebooks/teste_botoes_efetividade.ipynb)**
 
-**True/False.**
+# 4. Respondedo a Questão de Negócio
 
-**Hypothesis 02:**
+**1. Alguma das conversões é realmente melhor do que a atual? Qual seria o nome da variação?**
 
-**True/False.**
+A resposta é sim! O Botão "Connect" é a opção.
 
-**Hypothesis 03:**
-
-**True/False.**
-
-# 5. Machine Learning Model Applied
-
-# 6. Machine Learning Modelo Performance
-
-# 7. Business Results
-
-# 8. Conclusions
-
-# 9. Lessons Learned
-
-# 10. Next Steps to Improve
-
-# LICENSE
-
-# All Rights Reserved - Comunidade DS 2022
