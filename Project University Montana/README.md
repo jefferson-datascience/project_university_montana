@@ -42,5 +42,5 @@ Nesse teste o objetivo foi verificar a diferença na proporção de taxas de cli
 
 **1. Alguma das conversões é realmente melhor do que a atual? Qual seria o nome da variação?**
 
-A resposta é sim! O Botão "Connect" é a opção.
+A resposta é sim! O Botão "Connect" é a melhor opção.
 
